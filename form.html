@@ -5,98 +5,126 @@
   <title>Форма</title>
 </head>
 <body>
-  <header>
-    <ul class="main-menu"></ul>
-      <il>ИНФОРМАЦИЯ</il>
-      <il>ОСТАВИТЬ ОТЗЫВ</il>
-      <il>БЛОГ ШЕРИФА</il>
-      <il>гостиницы</il>
-    </ul>
-    <div class="close"></div>
-  </header>
-  <section class="main-section">
-    <section>
+  <div class="wrapper">
+    <header>
+      <ul class="main-menu"></ul>
+        <il>ИНФОРМАЦИЯ</il>
+        <il>ОСТАВИТЬ ОТЗЫВ</il>
+        <il>БЛОГ ШЕРИФА</il>
+        <il>гостиницы</il>
+      </ul>
       <div>
         <img src="" alt="">
-        <button class="menu">
-          <div></div>
-          <div></div>
-          <div></div>
-        </button>
       </div>
-      <div>
-        <p>Оставьте свой отзыв</p>
-        <p>Помогите нашим отелям стать лучше! оставьте отзыв о них, а также о посещенных вами достопримечательностях.</p>
+      <button> class="close"></button>
+    </header>
+    <div class="content">
+      <section>
+        <div class="promo-clock">
+          <img src="" alt="">
+        </div>
+        <div>
+          <p>Оставьте свой отзыв</p>
+          <p>Помогите нашим отелям стать лучше! оставьте отзыв о них, а также о посещенных вами достопримечательностях.</p>
+        </div>
+      </section>
+      <section>
+        <form action="">
+          <div>
+            <p>Представьтесь, пожалуйста:</p>
+            <label for="">ФАМИЛИЯ: * <input type="text" name="name" value="Иванов"></label>
+            <label for="">ИМЯ: * <input type="text" name="name" value="Петр"></label>
+            <label for="">Отчество: <input type="text" name="name" value="Александрович"></label>
+          </div>
+          <div>
+            <p>ВАше Общее впечатление:</p>
+            <label><input type="radio" name="radio">Скорее положительное</label>
+            <label><input type="radio" name="radio">Скорее отрицательное</label>
+          </div>
+          <div>
+            <p>Даты вашей поездки:</p>
+            <label for="">Дата приезда: *<input type="text" name="date" value="4 июля 2015"></label>
+            <p>Длительность пребывания: *</p>
+            <div class="counter">
+              <button type="button" class="btn btn--plus">+</button>
+              <button type="button" class="btn btn--minus">-</button>
+              <input type="text" class="counter__field">
+            </div>
+            <label for="">Дата отъезда: *<input type="text" name="date-2" value="28 июля 2015"></label>
+          </div>
+          <div>
+            <p>кол-во путешественников:</p>
+            <p>Количество путешественников: *</p>
+            <div class="counter">
+              <button type="button" class="btn btn--plus">+</button>
+              <button type="button" class="btn btn--minus">-</button>
+              <input type="text" class="counter__field">
+            </div>
+            <p>№</p>
+            <p>1</p>
+            <label for="">ФАМИЛИЯ: * <input type="text" name="name" value="Иванов"></label>
+            <label for="">ИМЯ: * <input type="text" name="name" value="Петр"></label>
+            <label for="">Отчество: <input type="text" name="name" value="Александрович"></label>
+            <p>№</p>
+            <p>2</p>
+            <label for="">ФАМИЛИЯ: * <input type="text" name="name" value="Иванов"></label>
+            <label for="">ИМЯ: * <input type="text" name="name" value="Петр"></label>
+            <label for="">Отчество: <input type="text" name="name" value="Александрович"></label>
+          </div>
+          <div class="">
+            <p>посещенные достопримечательности:</p>
+            <input type="checkbox" name="option1" value="a1" checked>Мост Дьявола<br>
+            <input type="checkbox" name="option2" value="a2">Слайд-парк<br>
+            <input type="checkbox" name="option3" value="a3" checked>Гора-Колокол<br>
+            <input type="checkbox" name="option4" value="a4" checked>Красные скалы<br>
+          </div>
+          <div>
+            <p>ЗАГРУЗИТЕ ФОТОГРАФИИ:</p>
+            <input type="file">
+            <p>ВЫБРАТЬ ФОТОГРАФИИ</p>
+            <figure class="preview-image">
+              <img src="" alt="">
+              <a href="" class="image-delete"></a>
+            </figure>
+            <figure class="preview-image">
+              <img src="" alt="">
+              <a href="" class="image-delete"></a>
+            </figure>
+            <figure class="preview-image">
+              <img src="" alt="">
+              <a href="" class="image-delete"></a>
+            </figure>
+            <figure class="preview-image">
+              <img src="" alt="">
+              <a href="" class="image-delete"></a>
+            </figure>
+            <figure class="preview-image">
+              <img src="" alt="">
+              <a href="" class="image-delete"></a>
+            </figure>
+            <figure class="preview-image">
+              <img src="" alt="">
+              <a href="" class="image-delete"></a>
+            </figure>
+            <figure class="preview-image">
+              <img src="" alt="">
+              <a href="" class="image-delete"></a>
+            </figure>
+          </div>
+          <input type="submit" value="ОТПРАВИТЬ ОТЗЫВ">
+        </form>
+      </section>
+    </div>
+    <footer>
+      <p>#visitSEDONA</p>
+      <div class="social">
+        <a href=""></a>
+        <a href=""></a>
+        <a href=""></a>
       </div>
-    </section>
-    <section>
-      <form action="">
-        <div>
-          <p>Представьтесь, пожалуйста:</p>
-          <label for="">ФАМИЛИЯ: * <input type="text" name="name" value="Иванов"></label>
-          <label for="">ИМЯ: * <input type="text" name="name" value="Петр"></label>
-          <label for="">Отчество: <input type="text" name="name" value="Александрович"></label>
-        </div>
-        <div>
-          <p>ВАше Общее впечатление:</p>
-          <label><input type="radio" name="radio">Скорее положительное</label>
-          <label><input type="radio" name="radio">Скорее отрицательное</label>
-        </div>
-        <div>
-          <p>Даты вашей поездки:</p>
-          <label for="">Дата приезда: *<input type="text" name="date" value="4 июля 2015"></label>
-          <p>Длительность пребывания: *</p>
-          <div></div>
-          <div>14 дн</div>
-          <div></div>
-          <label for="">Дата отъезда: *<input type="text" name="date-2" value="28 июля 2015"></label>
-        </div>
-        <div>
-          <p>кол-во путешественников:</p>
-          <p>Количество путешественников: *</p>
-          <div></div>
-          <div>2 чел.</div>
-          <div></div>
-          <p>№</p>
-          <p>1</p>
-          <label for="">ФАМИЛИЯ: * <input type="text" name="name" value="Иванов"></label>
-          <label for="">ИМЯ: * <input type="text" name="name" value="Петр"></label>
-          <label for="">Отчество: <input type="text" name="name" value="Александрович"></label>
-          <p>№</p>
-          <p>2</p>
-          <label for="">ФАМИЛИЯ: * <input type="text" name="name" value="Иванов"></label>
-          <label for="">ИМЯ: * <input type="text" name="name" value="Петр"></label>
-          <label for="">Отчество: <input type="text" name="name" value="Александрович"></label>
-        </div>
-        <div class="">
-          <p>посещенные достопримечательности:</p>
-          <input type="checkbox" name="option1" value="a1" checked>Мост Дьявола<br>
-          <input type="checkbox" name="option2" value="a2">Слайд-парк<br>
-          <input type="checkbox" name="option3" value="a3" checked>Гора-Колокол<br>
-          <input type="checkbox" name="option4" value="a4" checked>Красные скалы<br>
-        </div>
-        <div>
-          <p>ЗАГРУЗИТЕ ФОТОГРАФИИ:</p>
-          <p>ВЫБРАТЬ ФОТОГРАФИИ</p>
-          <img src="" alt="">
-          <img src="" alt="">
-          <img src="" alt="">
-          <img src="" alt="">
-          <img src="" alt="">
-          <img src="" alt="">
-          <img src="" alt="">
-        </div>
-        <input type="submit" value="ОТПРАВИТЬ ОТЗЫВ">
-      </form>
-    </section>
-  </section>
-  <footer>
-    <p>#visitSEDONA</p>
-    <a href=""></a>
-    <a href=""></a>
-    <a href=""></a>
-    <p>Разработано</p>
-    <img src="" alt="">
-  </footer>
+      <p>Разработано</p>
+      <img src="" alt="">
+    </footer>
+  </div>
 </body>
 </html>
