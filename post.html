@@ -6,7 +6,7 @@
 </head>
 <body>
   <div class="wrapper">
-    <header>
+    <header class="main-header">
       <ul class="main-menu"></ul>
         <il class="main-menu__item">ИНФОРМАЦИЯ</il>
         <il class="main-menu__item">ОСТАВИТЬ ОТЗЫВ</il>
@@ -16,11 +16,11 @@
       <div class="main-logo">
         <img src="" alt="">
       </div>
-      <button class="main-button main-button--open main-button--close"></button>
+      <button class="main-button main-button--close"></button>
     </header>
     <div class="content">
       <div class="promo-block">
-        <img src="" alt="">
+        <img class="promo-block__image" src="" alt="">
       </div>
       <div class="block-title-blog">
         <p class="block-title-blog__title">БЛОГ Шерифа</p>
@@ -31,37 +31,38 @@
         <p class="article__tag-subject">происшествия</p>
       </div>
       <article class="article-full">
-        <h1 class="article-full__title">Внимание! сбежала моя домашняя анаконда</h1>
-        <p class="article-full__annotation">Жители Седоны и гости города, будьте бдительны — Сбежала моя домашняя змея. Увидевшему срочно звонить 911 и бежать от нее подальше.</p>
-        <p class="article-full__part-title">Предыстория</p>
-        <p class="article-full__part-text">В далеком 85-ом я подобрал эту змею на трассе. Ее переехал грузовик и она валялась на обочине. Мне стало жаль ее и я решил взять ее с собой. Кинул в багажник пикапа и подумал  тогда: «Если доедет до Седоны живой, так и быть, оставлю ее себе»</p>
-        <p class="article-full__part-title">Пропажа</p>
-        <p class="article-full__part-text">Неделю назад я вернулся из канзаса и не нашел Анаконду дома. Обошел все 200 гектаров своего участка, но ее нигде нет. Решил сообщить в полицию, но вовремя вспомнил, что я и есть полиция, поэтому отправился на поиски сам. особые приметы змеи:</p>
-        <ul class="list">
-          <il class="list__point">Длина: 5 метров</il>
-          <il class="list__point">Масса: 85 кг</il>
-          <il class="list__point">Окраска: серовато-зелёная</il>
-        </ul>
-        <p class="article-full__part-text">Если вы увидите эту змею, сразу<a class="article-full__link" href="">звоните 911</a>и бегите со всех ног от нее!</p>
-        <p class="article-full__part-title">Предостережение</p>
-        <p class="article-full__part-text">не пытайтесь убить змею, если увидите! Помните, что она тоже живое существо, хоть и выглядит не очень приятно. вот цитата, которая мне очень нравится:</p>
-        <div class="blockquote-block">
-          <blockquote class="blockquote-block__blockquote">Самый свирепый из зверей — теперь мы знаем — это человек, он убивает даже если не голоден.</blockquote>
-          <cite class="blockquote-block__cite">Адриано Челентано</cite>
+        <div class="article-full__header">
+          <h1 class="article-full__title">Внимание! сбежала моя домашняя анаконда</h1>
+          <p class="article-full__annotation">Жители Седоны и гости города, будьте бдительны — Сбежала моя домашняя змея. Увидевшему срочно звонить 911 и бежать от нее подальше.</p>
         </div>
+        <article class="article-full__content">
+          <h2>Предыстория</h2>
+          <p>В далеком 85-ом я подобрал эту змею на трассе. Ее переехал грузовик и она валялась на обочине. Мне стало жаль ее и я решил взять ее с собой. Кинул в багажник пикапа и подумал  тогда: «Если доедет до Седоны живой, так и быть, оставлю ее себе»</p>
+          <h2>Пропажа</h2>
+          <p>Неделю назад я вернулся из канзаса и не нашел Анаконду дома. Обошел все 200 гектаров своего участка, но ее нигде нет. Решил сообщить в полицию, но вовремя вспомнил, что я и есть полиция, поэтому отправился на поиски сам. особые приметы змеи:</p>
+          <ul>
+            <il>Длина: 5 метров</il>
+            <il>Масса: 85 кг</il>
+            <il>Окраска: серовато-зелёная</il>
+          </ul>
+          <p>Если вы увидите эту змею, сразу<ahref="">звоните 911</a>и бегите со всех ног от нее!</p>
+          <h2>Предостережение</h2>
+          <p>не пытайтесь убить змею, если увидите! Помните, что она тоже живое существо, хоть и выглядит не очень приятно. вот цитата, которая мне очень нравится:</p>
+          <blockquote>Самый свирепый из зверей — теперь мы знаем — это человек, он убивает даже если не голоден.<cite>Адриано Челентано</cite></blockquote>
+        </article>
       </article>
       <div class="navigation-articles">
-        <a class="navigation-articles__article" href="">ПРЕД.</a>
-        <a class="navigation-articles__article" href="">СЛЕД.</a>
-        <a class="navigation-articles__article" href="">НАЗАД к списку</a>
+        <a class="navigation-articles__item" href="">ПРЕД.</a>
+        <a class="navigation-articles__item" href="">СЛЕД.</a>
+        <a class="navigation-articles__item" href="">НАЗАД к списку</a>
       </div>
     </div>
-    <footer>
+    <footer class="main-footer">
       <p class="hashtag">#visitSEDONA</p>
       <div class="social">
-        <a class="social__vk" href=""></a>
-        <a class="social__fb" href=""></a>
-        <a class="social__youtu" href=""></a>
+        <a class="social-btn social__btn--vk" href=""></a>
+        <a class="social-btn social__btn--fb" href=""></a>
+        <a class="social-btn social__btn--utb" href=""></a>
       </div>
       <p class="developed">Разработано</p>
     </footer>
