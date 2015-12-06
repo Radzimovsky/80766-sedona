@@ -1,3 +1,5 @@
+@import "normalize.less";
+
 body{
   background: #696969;
 }
@@ -34,6 +36,13 @@ body{
       border-top: 1px solid #9ac2db;
       border-bottom: 1px solid #678fa8;
       background: @blue-color;
+        &:first-child {
+          border-top: 0 none;
+        }
+        &:last-child {
+          border-bottom: 0 none;
+          box-shadow: inset 0 -20px 7px -20px rgba(0, 0, 0, 0.2);
+        }
     }
 }
 .main-logo {
@@ -50,23 +59,14 @@ body{
 .main-button {
   position: absolute;
   display: block;
-  top: 0;
-  right: 0;
+  top: 17px;
+  right: 20px;
   width: 23px;
   height: 22px;
   padding: 0;
   border: 0 none;
-  background: @blue-color;
-    &::before {
-      position: absolute;
-      display: block;
-      content: "";
-      right: 20px;
-      width: 23px;
-      height: 22px;
-      background: url(../img/main-button.png);
-    }
-    &--close::before {
+  background: @blue-color url(../img/main-button.png);
+    &--close {
       background: url(../img/main-button--close.png);
     }
 }
@@ -88,8 +88,8 @@ body{
 .tagline-block {
   position: relative;
   width: 100%;
-  padding-top: 35px;
-  padding-bottom: 25px;
+  padding-top: 40px;
+  padding-bottom: 20px;
   background: #ffffff;
     &__tagline {
       margin: 0;
@@ -115,11 +115,11 @@ body{
     &::before {
       content: "";
       position: absolute;
-      top: -37px;
+      top: -36px;
       width: 100%;
       height: 37px;
       background: url(../img/tagline-block-top.png) no-repeat;
-      background-size: 100%;
+      background-size: 100% 37px;
     }
     &::after {
       content: "";
@@ -128,7 +128,7 @@ body{
       width: 100%;
       height: 37px;
       background: url(../img/tagline-block-bottom.png) no-repeat;
-      background-size: cover;
+      background-size: 100% 37px;
     }
 }
 .reasons {
@@ -142,6 +142,10 @@ body{
   padding-top: 60px;
   padding-bottom: 45px;
   background: @blue-color;
+    @padding-top: 60px;
+    .reason-block:first-of-type & {
+      padding-top: @padding-top + 15;
+    }
     &__title {
       margin: 0;
       margin-bottom: 8px;
@@ -179,7 +183,7 @@ body{
       width: 90%;
       background: #eeeeee;
       border-bottom: 1px solid #d6d6d6;
-        &:not(last-of-type) {
+        &:last-child {
           border-bottom: 0 none;
         }
     }
@@ -202,14 +206,14 @@ body{
       width: 100%;
     }
 }
+.reasons-minor {
+  padding-top: 40px;
+}
 .reason-minor {
   position: relative;
   padding-left: 22%;
   width: 78%;
   background: #ffffff;
-    &:nth-of-type(2) {
-      margin-top: 40px;
-    }
     &__title {
       margin: 0;
       margin-bottom: 20px;
@@ -237,14 +241,14 @@ body{
         }
     }
     &__text {
-     margin: 0;
-     margin-bottom: 35px;
-     font-size: 14px;
-     line-height: 21px;
-     color: #333333;
-     font-weight: normal;
-     font-family: "PT Sans", "Verdana", sans-serif;
-     text-transform: uppercase;
+      margin: 0;
+      margin-bottom: 35px;
+      font-size: 14px;
+      line-height: 21px;
+      color: #333333;
+      font-weight: normal;
+      font-family: "PT Sans", "Verdana", sans-serif;
+      text-transform: uppercase;
     }
 }
 .hotel-search{
@@ -315,17 +319,19 @@ body{
   text-transform: uppercase;
 }
 .social {
-  margin-left: -6px;
   margin-bottom: 40px;
   width: 100%;
   text-align: center;
   font-size: 0;
     &__btn {
       display: inline-block;
-      margin-left: 6px;
+      margin-right: 6px;
       width: 46px;
       height: 48px;
       background: @blue-color;
+        &:last-child {
+          margin-right: 0;
+        }
         &--tw {
           background: @blue-color url(../img/twitter.png) no-repeat 50% 50%;
         }
@@ -355,7 +361,6 @@ body{
       text-transform: uppercase;
     }
     &__img {
-      position: relative;
       display: inline-block;
       vertical-align: middle;
       margin-left: 12px;
