@@ -1,0 +1,51 @@
+.reason-minor {
+  position: relative;
+  margin-bottom: 35px;
+  padding-left: 22%;
+  width: 78%;
+  background: #ffffff;
+    &__title {
+      margin: 0;
+      margin-bottom: 20px;
+      font-size: 18px;
+      line-height: 26px;
+      color: #000000;
+      font-weight: bold;
+      font-family: "PT Sans", "Verdana", sans-serif;
+      text-transform: uppercase;
+        &::before {
+          position: absolute;
+          left: 8%;
+          content: "";
+          background-repeat: no-repeat;
+          background-position: center;
+          }
+        &--house::before {
+          width: 37px;
+          height: 37px;
+          background-image: url(../img/house.png);
+        }
+        &--food::before {
+          width: 37px;
+          height: 35px;
+          background-image: url(../img/food.png);
+        }
+        &--souvenirs::before {
+          width: 32px;
+          height: 38px;
+          background-image: url(../img/souvenirs.png);
+        }
+    }
+    &__text {
+      margin: 0;
+      font-size: 14px;
+      line-height: 21px;
+      color: #333333;
+      font-weight: normal;
+      font-family: "PT Sans", "Verdana", sans-serif;
+      text-transform: uppercase;
+    }
+    &:last-child {
+      margin-bottom: 0;
+    }
+}

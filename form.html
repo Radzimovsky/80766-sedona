@@ -2,93 +2,101 @@
 <html lang="ru">
 <head>
   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Форма</title>
-  <link rel="stylesheet" type="text/css" href="css/normalize.css">
-  <link rel="stylesheet" type="text/css" href="css/style.min.css">
+  <link rel="stylesheet" type="text/css" href="css/style.css">
 </head>
 <body>
   <div class="wrapper">
     <header class="main-header">
-      <ul class="main-menu"></ul>
-        <il class="main-menu__item">ИНФОРМАЦИЯ</il>
-        <il class="main-menu__item">ОСТАВИТЬ ОТЗЫВ</il>
-        <il class="main-menu__item">БЛОГ ШЕРИФА</il>
-        <il class="main-menu__item">гостиницы</il>
+      <ul class="main-menu">
+        <li class="main-menu__item"><a class="main-menu__link" href="#">ИНФОРМАЦИЯ</a></li>
+        <li class="main-menu__item"><a class="main-menu__link" href="#">ОСТАВИТЬ ОТЗЫВ</a></li>
+        <li class="main-menu__item"><a class="main-menu__link" href="#">БЛОГ ШЕРИФА</a></li>
+        <li class="main-menu__item"><a class="main-menu__link" href="#">гостиницы</a></li>
       </ul>
       <div class="main-logo">
-        <img src="" alt="">
+        <img class="main-logo__img" src="./img/main-logo.png" alt="main-logo">
       </div>
       <button class="main-button main-button--close"></button>
     </header>
     <div class="content">
       <div class="promo-block">
-        <img class="promo-block__image" src="" alt="">
+        <img class="promo-block__image" src="./img/promo-block__image.png" alt="promo-block__image">
       </div>
-      <div class="tagline-block">
+      <div class="tagline-block tagline-block--without-bottom">
         <h1 class="tagline-block__tagline">Оставьте свой отзыв</h1>
-        <p class="tagline-block__text">Помогите нашим отелям стать лучше! оставьте отзыв о них, а также о посещенных вами достопримечательностях.</p>
+        <p class="tagline-block__text">Помогите нашим отелям стать лучше!<br>оставьте отзыв о них, а также о<br>посещенных вами<br>достопримечательностях.</p>
       </div>
       <form class="feedback" action="">
         <div class="feedback__block">
           <p class="feedback__title">Представьтесь, пожалуйста:</p>
-          <label class="feedback__name-label" for="name-surname">ФАМИЛИЯ: *</label>
-          <input class="feedback__name-input" type="text" id="name-surname" name="surname" value="Иванов">
-          <label class="feedback__name-label" for="name-name">ИМЯ: *</label>
-          <input class="feedback__name-input" type="text" id="name-name" name="name" value="Петр">
-          <label class="feedback__name-label" for="name-patronymic">Отчество:</label>
-          <input class="feedback__name-input" type="text" id="" name="patronymic" value="Александрович">
+          <label class="feedback__name-label" for="name-surname">ФАМИЛИЯ: <span class="feedback__required">*</span></label><br>
+          <input class="feedback__name-input" type="text" id="name-surname" name="surname" value="Иванов"><br>
+          <label class="feedback__name-label" for="name-name">ИМЯ: <span class="feedback__required">*</span></label><br>
+          <input class="feedback__name-input" type="text" id="name-name" name="name" value="Петр"><br>
+          <label class="feedback__name-label" for="name-patronymic">Отчество:</label><br>
+          <input class="feedback__name-input" type="text" id="name-patronymic" name="patronymic" value="Александрович"><br>
         </div>
         <div class="feedback__block">
           <p class="feedback__title">ВАше Общее впечатление:</p>
           <input class="feedback__impression-input" type="radio" id="positive" name="impression">
-          <label class="feedback__impression-label" for="positive">Скорее положительное</label>
+          <label class="feedback__impression-label" for="positive">Скорее положительное</label><br>
           <input class="feedback__impression-input" type="radio" id="negative" name="impression">
           <label class="feedback__impression-label" for="negative">Скорее отрицательное</label>
         </div>
         <div class="feedback__block">
           <p class="feedback__title">Даты вашей поездки:</p>
-          <label class="feedback__arrival-date-label" for="arrival-date">Дата приезда: *</label>
+          <label class="feedback__arrival-date-label" for="arrival-date">Дата приезда: <span class="feedback__required">*</span></label><br>
           <input class="feedback__arrival-date-input" type="text" id="arrival-date" name="arrival-date" value="4 июля 2015">
-          <p class="feedback__text">Длительность пребывания: *</p>
-          <div class="duration-counter">
-            <button class="duration-counter__btn duration-counter__btn--plus" type="button">+</button>
-            <button class="duration-counter__btn duration-counter__btn--minus" type="button">-</button>
-            <input class="duration-counter__field" type="text">
+          <p class="feedback__text">Длительность пребывания: <span class="feedback__required">*</span></p>
+          <div class="duration-counter clearfix">
+            <button class="duration-counter__btn duration-counter__btn--plus" type="button"></button>
+            <button class="duration-counter__btn duration-counter__btn--minus" type="button"></button>
+            <div class="duration-counter__container">
+              <input class="duration-counter__field" type="text" value="14">
+            </div>
           </div>
-          <label class="feedback__departure-date-label" for="departure-date">Дата отъезда: *</label>
-          <input class="feedback__departure-date-label" type="text" id="departure-date" name="departure-date" value="28 июля 2015">
+          <label class="feedback__departure-date-label" for="departure-date">Дата отъезда: <span class="feedback__required">*</span></label>
+          <input class="feedback__departure-date-input" type="text" id="departure-date" name="departure-date" value="28 июля 2015">
         </div>
         <div class="feedback__block">
           <p class="feedback__title">кол-во путешественников:</p>
-          <p class="feedback__text">Количество путешественников: *</p>
+          <p class="feedback__text">Количество путешественников: <span class="feedback__required">*</span></p>
           <div class="participant-counter">
-            <button class="participant-counter__btn participant-counter__btn--plus" type="button">+</button>
-            <button class="participant-counter__btn participant-counter__btn--minus" type="button">-</button>
-            <input class="participant-counter__field" type="text">
+            <button class="participant-counter__btn participant-counter__btn--plus" type="button"></button>
+            <button class="participant-counter__btn participant-counter__btn--minus" type="button"></button>
+            <div class="participant-counter__container">
+              <input class="participant-counter__field" type="text" value="2">
+            </div>
           </div>
-          <div class="number-profile">
-            <p class="number-profile__sign">№</p>
-            <p class="number-profile__numeric">1</p>
+          <div class="profile clearfix">
+            <div class="profile__number">
+              <p class="profile__sign">№</p>
+              <p class="profile__numeric">1</p>
+            </div>
+            <div class="profile__data">
+              <label class="profile__label" for="profile-surname-1">ФАМИЛИЯ: <span class="feedback__required">*</span></label>
+              <input class="profile__input" id="profile-surname-1" type="text" name="surname" value="Иванов">
+              <label class="profile__label" for="profile-name-1">ИМЯ: <span class="feedback__required">*</span></label>
+              <input class="profile__input" id="profile-name-1" type="text" name="name" value="Петр">
+              <label class="profile__label" for="profile-patronymic-1">Отчество:</label>
+              <input class="profile__input" id="profile-patronymic-1" type="text"  name="patronymic" value="Александрович">
+            </div>
           </div>
-          <div class="profile-data">
-            <label class="profile-data__label" for="profile-surname-1">ФАМИЛИЯ: *</label>
-            <input class="profile-data__input" id="profile-surname-1" type="text" name="surname" value="Иванов">
-            <label class="profile-data__label" for="profile-name-1">ИМЯ: *</label>
-            <input class="profile-data__input" id="profile-name-1" type="text" name="name" value="Петр">
-            <label class="profile-data__label" for="profile-patronymic-1">Отчество:</label>
-            <input class="profile-data__input" id="profile-patronymic-1" type="text"  name="patronymic" value="Александрович">
-          </div>
-          <div class="number-profile">
-            <p class="number-profile__sign">№</p>
-            <p class="number-profile__numeric">2</p>
-          </div>
-          <div class="profile-data">
-            <label class="profile-data__label" for="profile-surname-1">ФАМИЛИЯ: *</label>
-            <input class="profile-data__input" id="profile-surname-1" type="text" name="surname" value="Иванов">
-            <label class="profile-data__label" for="profile-name-1">ИМЯ: *</label>
-            <input class="profile-data__input" id="profile-name-1" type="text" name="name" value="Петр">
-            <label class="profile-data__label" for="profile-patronymic-1">Отчество:</label>
-            <input class="profile-data__input" id="profile-patronymic-1" type="text"  name="patronymic" value="Александрович">
+          <div class="profile clearfix">
+            <div class="profile__number">
+              <p class="profile__sign">№</p>
+              <p class="profile__numeric">2</p>
+            </div>
+            <div class="profile__data">
+              <label class="profile__label" for="profile-surname-1">ФАМИЛИЯ: <span class="feedback__required">*</span></label>
+              <input class="profile__input" id="profile-surname-1" type="text" name="surname" value="Иванов">
+              <label class="profile__label" for="profile-name-1">ИМЯ: <span class="feedback__required">*</span></label>
+              <input class="profile__input" id="profile-name-1" type="text" name="name" value="Петр">
+              <label class="profile__label" for="profile-patronymic-1">Отчество:</label>
+              <input class="profile__input" id="profile-patronymic-1" type="text"  name="patronymic" value="Александрович">
+            </div>
           </div>
         </div>
         <div class="feedback__block">
@@ -141,11 +149,14 @@
     <footer class="main-footer">
       <p class="hashtag">#visitSEDONA</p>
       <div class="social">
-        <a class="social-btn social__btn--vk" href=""></a>
-        <a class="social-btn social__btn--fb" href=""></a>
-        <a class="social-btn social__btn--utb" href=""></a>
+        <a class="social__btn social__btn--tw" href="#"></a>
+        <a class="social__btn social__btn--fb" href="#"></a>
+        <a class="social__btn social__btn--utb" href="#"></a>
       </div>
-      <p class="developed">Разработано</p>
+      <div class="developed">
+        <p class="developed__text">Разработано</p>
+        <img class="developed__img" src="./img/htmlacademy.png" alt="htmlacademy">
+      </div>
     </footer>
   </div>
 </body>
