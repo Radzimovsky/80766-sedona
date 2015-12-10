@@ -1,0 +1,46 @@
+.profile {
+  margin-bottom: 33px;
+    &:last-of-type {
+      margin-bottom: 0;
+    }
+    &__number {
+      float: left;
+      width: 61px;
+    }
+    &__sign{
+      margin: 0;
+      margin-bottom: 9px;
+      font-size: 14px;
+      line-height: 26px;
+      color: #333333;
+      font-weight: normal;
+      font-family: "PT Sans", "Verdana", sans-serif;
+      text-transform: uppercase;
+      text-align: center;
+      cursor: pointer;
+    }
+    &__numeric{
+      margin: 0;
+      padding: 16px 0;
+      text-align: center;
+      font-size: 18px;
+      line-height: 26px;
+      color: #000000;
+      font-weight: bold;
+      font-family: "PT Sans", "Verdana", sans-serif;
+      text-align: center;
+      background-color: #e5e5e5;
+    }
+    &__data {
+      margin-left: 67px;
+    }
+    &__label {
+      .label();
+    }
+    &__input {
+      .input();
+        &:last-of-type {
+          margin-bottom: 0;
+        }
+    }
+}
