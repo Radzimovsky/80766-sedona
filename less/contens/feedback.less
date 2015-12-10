@@ -1,0 +1,190 @@
+.feedback {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  padding-right: 20px;
+  padding-left: 20px;
+  width: 100%;
+  font-size: 0;
+    &__block {
+      padding-top: 20px;
+      padding-bottom: 23px;
+      width: 100%;
+      border-top: 1px solid #e5e5e5;
+    }
+    &__title {
+      margin: 0;
+      margin-bottom: 30px;
+      text-align: center;
+      font-size: 18px;
+      line-height: 26px;
+      color: #000000;
+      font-weight: bold;
+      font-family: "PT Sans", "Verdana", sans-serif;
+      text-transform: uppercase;
+        .feedback__block:last-of-type & {
+          margin-bottom: 20px;
+        }
+    }
+    &__name-label {
+      .label();
+    }
+    &__name-input {
+      .input();
+        &:last-of-type {
+          margin-bottom: 0;
+        }
+    }
+    &__required {
+      color: #ff0000;
+    }
+    &__impression-label {
+      box-sizing: border-box;
+      position: relative;
+      display: inline-block;
+      vertical-align: top;
+      margin: 0;
+      margin-bottom: 15px;
+      padding-top: 14px;
+      padding-bottom: 14px;
+      padding-left: 80px;
+      width: 100%;
+      font-size: 18px;
+      line-height: 26px;
+      color: #000000;
+      font-weight: bold;
+      font-family: "PT Sans", "Verdana", sans-serif;
+      text-transform: none;
+      cursor: pointer;
+        &:last-of-type {
+          margin-bottom: 0;
+        }
+    }
+    input[type="radio"] {
+      display: none;
+        & + .feedback__impression-label::before{
+          content: "";
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 22px;
+          height: 22px;
+          background-color:#f2f2f2;
+          border-radius: 50%;
+          border: 16px solid #f2f2f2;
+        }
+        &:cheked + .feedback__impression-label::before{
+          background-color:#333333;
+        }
+    }
+    &__arrival-date-label {
+      .label();
+    }
+    &__arrival-date-input {
+      .input();
+    }
+    &__text {
+      margin: 0;
+      margin-bottom: 9px;
+      margin-left: 22px;
+      font-size: 14px;
+      line-height: 26px;
+      color: #333333;
+      font-weight: normal;
+      font-family: "PT Sans", "Verdana", sans-serif;
+      text-transform: uppercase;
+    }
+    &__departure-date-label {
+      .label();
+    }
+    &__departure-date-input {
+      .input();
+      &:last-of-type {
+        margin-bottom: 0;
+      }
+    }
+    &__attraction-input {
+      display: none;
+        & + .feedback__attraction-label::before{
+          content: "";
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 56px;
+          height: 56px;
+          background-color:#f2f2f2;
+          border-radius: 5px;
+        }
+        &:cheked + .feedback__attraction-label::after{
+          content: "";
+          position: absolute;
+          top: 20px;
+          left: 15px;
+          width: 21px;
+          height: 7px;
+          border-bottom: 5px solid #333333;
+          border-left: 5px solid #333333;
+          transform: rotate(-45deg);
+        }
+    }
+    &__attraction-label {
+      box-sizing: border-box;
+      position: relative;
+      display: inline-block;
+      vertical-align: top;
+      margin: 0;
+      margin-bottom: 24px;
+      padding-top: 15px;
+      padding-bottom: 15px;
+      padding-left: 80px;
+      width: 100%;
+      font-size: 18px;
+      line-height: 26px;
+      color: #000000;
+      font-weight: bold;
+      font-family: "PT Sans", "Verdana", sans-serif;
+      text-transform: none;
+      cursor: pointer;
+        &:last-of-type {
+          margin-bottom: 0;
+        }
+    }
+    &__download-input {
+      display: none;
+    }
+    &__download-label {
+      box-sizing: border-box;
+      display: inline-block;
+      margin: 0 auto;
+      margin-bottom: 55px;
+      padding: 19px 10px;
+      width: 100%;
+      text-align: center;
+      font-size: 21px;
+      line-height: 21px;
+      color: rgba(51, 51, 51, 0.3);
+      font-weight: bold;
+      font-family: "PT Sans", "Verdana", sans-serif;
+      text-transform: uppercase;
+      text-decoration: none;
+      background-color: #f2f2f2;
+    }
+    &__send {
+      box-sizing: border-box;
+      display: inline-block;
+      margin: 0 auto;
+      margin-bottom: 70px;
+      padding: 19px 10px;
+      width: 100%;
+      text-align: center;
+      font-size: 21px;
+      line-height: 21px;
+      color: #ffffff;
+      font-weight: bold;
+      font-family: "PT Sans", "Verdana", sans-serif;
+      text-transform: uppercase;
+      text-decoration: none;
+      background-color: @blue-color;
+      border: 0 none;
+    }
+}
