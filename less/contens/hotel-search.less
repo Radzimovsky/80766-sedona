@@ -14,8 +14,9 @@
       text-transform: uppercase;
     }
     &__text {
-      margin: 0;
+      margin: 0 auto;
       margin-bottom: 35px;
+      width: 260px;
       text-align: center;
       font-size: 14px;
       line-height: 24px;
@@ -40,6 +41,13 @@
       text-decoration: none;
       background-color: @blue-color;
       box-sizing: border-box;
+        &:hover {
+          background-color: #669ec0;
+        }
+        &:active {
+          color: rgba(255, 255, 255, 0.3);
+          background-color: #5496bd;
+        }
     }
     &__map {
       width: 100%;
@@ -47,4 +55,34 @@
       background: url(../img/map.png) no-repeat 50% 50%;
       background-size: cover;
     }
+}
+@media (min-width: @width-tablet) {
+  .hotel-search{
+    padding-top: 58px;
+      &__title{
+        margin-bottom: 38px;
+        font-size: 30px;
+        line-height: 30px;
+      }
+      &__text {
+        margin-bottom: 45px;
+        width: 460px;
+      }
+      &__span {
+        padding: 0 80px;
+      }
+      &__button {
+        margin: 0 155px;
+        margin-bottom: 60px;
+        width: auto;
+      }
+  }
+}
+@media (min-width: @width-desktop) {
+  .hotel-search{
+    &__button {
+      margin: 0 371px;
+      margin-bottom: 60px;
+    }
+  }
 }

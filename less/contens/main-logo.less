@@ -1,6 +1,6 @@
 .main-logo {
   position: absolute;
-  bottom: -70px;
+  top: 56px * 4 - 2;
   width: 138px;
   left: 50%;
   transform: translateX(-50%);
@@ -8,4 +8,9 @@
       width: 100%;
       display: block;
     }
+}
+@media (min-width: @width-tablet) {
+  .main-logo {
+    top: 0px;
+  }
 }
