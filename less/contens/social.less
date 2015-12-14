@@ -11,6 +11,12 @@
       background-color: @blue-color;
       background-repeat: no-repeat;
       background-position: center;
+        &:hover {
+          background-color: #669ec0;
+        }
+        &:active {
+          background-color: #5496bd;
+        }
         &:last-child {
           margin-right: 0;
         }
@@ -24,4 +30,10 @@
           background-image: url(../img/youtube.png);
         }
     }
+}
+@media (min-width: @width-tablet) {
+  .social {
+    margin-bottom: 0;
+    width: 33.333333%;
+  }
 }

@@ -12,9 +12,21 @@
       width: 100%;
       border-top: 1px solid #e5e5e5;
     }
-    &__title {
+    &__doublet {
+      padding-bottom: 17px;
+        &--last-in-block {
+          padding-bottom: 0;
+        }
+    }
+    &__wrapper {
       margin: 0;
       margin-bottom: 30px;
+        .feedback__block:last-of-type & {
+          margin-bottom: 20px;
+        }
+    }
+    &__title {
+      margin: 0;
       text-align: center;
       font-size: 18px;
       line-height: 26px;
@@ -22,18 +34,12 @@
       font-weight: bold;
       font-family: "PT Sans", "Verdana", sans-serif;
       text-transform: uppercase;
-        .feedback__block:last-of-type & {
-          margin-bottom: 20px;
-        }
     }
     &__name-label {
       .label();
     }
     &__name-input {
       .input();
-        &:last-of-type {
-          margin-bottom: 0;
-        }
     }
     &__required {
       color: #ff0000;
@@ -73,7 +79,7 @@
           border-radius: 50%;
           border: 16px solid #f2f2f2;
         }
-        &:cheked + .feedback__impression-label::before{
+        &:checked + .feedback__impression-label::before{
           background-color:#333333;
         }
     }
@@ -86,7 +92,7 @@
     &__text {
       margin: 0;
       margin-bottom: 9px;
-      margin-left: 22px;
+      padding-left: 22px;
       font-size: 14px;
       line-height: 26px;
       color: #333333;
@@ -115,7 +121,7 @@
           background-color:#f2f2f2;
           border-radius: 5px;
         }
-        &:cheked + .feedback__attraction-label::after{
+        &:checked + .feedback__attraction-label::after{
           content: "";
           position: absolute;
           top: 20px;
@@ -125,6 +131,12 @@
           border-bottom: 5px solid #333333;
           border-left: 5px solid #333333;
           transform: rotate(-45deg);
+        }
+        & + .feedback__attraction-label:hover::before {
+          background-color: #e5e5e5;
+        }
+        & + .feedback__attraction-label:active::before{
+          background-color: #d5d5d5;
         }
     }
     &__attraction-label {
@@ -187,4 +199,117 @@
       background-color: @blue-color;
       border: 0 none;
     }
+}
+@media (min-width: @width-tablet) {
+  .feedback {
+    padding-right: 59px;
+    padding-left: 59px;
+      &__block {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        padding-top: 0;
+        padding-bottom: 68px;
+        border-top: 0 none;
+          &--attraction {
+            justify-content: center;
+          }
+          &--impression {
+              & .feedback__wrapper {
+                margin-bottom: 46px;
+              }
+          }
+      }
+      &__wrapper {
+        position: relative;
+        width: 100%;
+        text-align: center;
+          &::before {
+            content: "";
+            position: relative;
+            display: block;
+            top: 13px;
+            border-bottom: 1px solid #dbdbdb;
+            z-index: 0;
+          }
+      }
+      &__title {
+        position: relative;
+        display: inline-block;
+        vertical-align: top;
+        width: 400px;
+        font-size: 21px;
+        background-color: #ffffff;
+        z-index: 5;
+      }
+      &__doublet {
+        display: inline-block;
+        padding-bottom: 0;
+        width: 30%;
+      }
+      &__impression-label {
+        width: auto;
+      }
+      &__group {
+        margin: 0 auto;
+        width: 30%;
+          &--bottom {
+            margin-bottom: 32px;
+          }
+      }
+      &__text {
+        width: 100%;
+        text-align: left;
+          &--not-padding {
+            padding-left: 0;
+            width: 105%;
+          }
+      }
+      &__attraction-label {
+        width: 259px;
+      }
+      &__download-label {
+        margin: 0 96px;
+        margin-top: 20px;
+        margin-bottom: 60px;
+        width: 100%;
+      }
+      &__container {
+        margin: 0 96px;
+      }
+  }
+}
+@media (min-width: @width-desktop) {
+  .feedback {
+    padding-right: 122px;
+    padding-left: 122px;
+      &__block {
+          &--impression {
+            justify-content: center;
+          }
+      }
+      &__impression-label {
+          &:first-of-type {
+            margin-right: 50px;
+          }
+          &:last-of-type {
+            margin-left: 50px;
+          }
+      }
+      &__group {
+          &--bottom {
+            margin: 0;
+            margin-bottom: 32px;
+          }
+      }
+      &__download-label {
+        margin: 0;
+        margin-top: 20px;
+        margin-bottom: 60px;
+        width: 100%;
+      }
+      &__container {
+        margin: 0 249px;
+      }
+  }
 }
