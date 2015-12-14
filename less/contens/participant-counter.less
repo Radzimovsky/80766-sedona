@@ -6,3 +6,30 @@
       }
     }
 }
+@media (min-width: @width-tablet) {
+  .participant-counter {
+    margin-bottom: 0;
+    &__container {
+      margin: 0 61px;
+      &::after {
+        display: none;
+      }
+    }
+    &__field {
+      text-align: center;
+    }
+  }
+}
+@media (min-width: @width-desktop) {
+  .participant-counter {
+    &__container {
+      margin: 0 67px;
+        &::after {
+          display: block;
+        }
+    }
+    &__field {
+      text-align: left;
+    }
+  }
+}

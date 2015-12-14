@@ -1,9 +1,11 @@
 .label() {
+  box-sizing: border-box;
   display: inline-block;
   vertical-align: middle;
   margin: 0;
   margin-bottom: 9px;
-  margin-left: 22px;
+  padding-left: 22px;
+  width: 100%;
   font-size: 14px;
   line-height: 26px;
   color: #333333;
@@ -15,7 +17,6 @@
 .input() {
   box-sizing: border-box;
   margin: 0;
-  margin-bottom: 17px;
   padding: 16px 22px;
   width: 100%;
   font-size: 18px;
@@ -24,10 +25,14 @@
   font-weight: bold;
   font-family: "PT Sans", "Verdana", sans-serif;
   text-transform: none;
-  background-color: #e5e5e5;
+  background-color: #f2f2f2;
   border: 0 none;
+    &:hover {
+      background-color: #e5e5e5;
+    }
     &:focus{
       outline: 3px solid #b8b8b8;
+      background-color: #ffffff;
     }
 }
 .counter() {
@@ -37,8 +42,17 @@
       padding: 0;
       width: 61px;
       height: 58px;
-      background-color: #E5E5E5;
+      background-color: #f2f2f2;
       border: 0 none;
+        &:hover {
+          background-color: #e5e5e5;
+        }
+        &:focus {
+          outline: none;
+        }
+        &:active{
+          background-color: #d5d5d5;
+        }
         &--plus {
           float: right;
             &::before {
@@ -97,5 +111,12 @@
     &__field {
       .input();
       margin-bottom: 0;
+        &:hover {
+          background-color: #f2f2f2;
+        }
+        &:focus{
+          outline: none;
+          background-color: #f2f2f2;
+        }
     }
 }

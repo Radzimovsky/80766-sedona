@@ -1,4 +1,6 @@
 .reason{
+  display: inline-block;
+  vertical-align: top;
   width: 100%;
   padding-top: 60px;
   padding-bottom: 45px;
@@ -7,8 +9,9 @@
       padding-top: @padding-top + 15;
     }
     &__title {
-      margin: 0;
-      margin-bottom: 8px;
+      margin: 0 auto;
+      margin-bottom: 14px;
+      width: 214px;
       text-align: center;
       font-size: 18px;
       line-height: 26px;
@@ -19,7 +22,7 @@
     }
     &__number {
       margin: 0;
-      margin-bottom: 8px;
+      margin-bottom: 19px;
       text-align: center;
       font-size: 14px;
       line-height: 21px;
@@ -29,7 +32,8 @@
       text-transform: uppercase;
     }
     &__text {
-      margin: 0;
+      margin: 0 auto;
+      width: 262px;
       text-align: center;
       font-size: 14px;
       line-height: 21px;
@@ -40,7 +44,7 @@
     }
     &--gray {
       margin: 0 auto;
-      width: 90%;
+      width: 100%;
       background: #eeeeee;
       border-bottom: 1px solid #d6d6d6;
         &:last-child {
@@ -52,4 +56,61 @@
     &--gray &__text {
       color: #333333;
     }
+    &__span {
+      display: none;
+    }
+}
+@media (min-width: @width-tablet) {
+  .reason{
+    padding-top: 45px;
+    padding-bottom: 45px;
+    width: 33.333333%;
+      .reason-block--swap &{
+        float: right;
+      }
+      .reason-block:first-of-type & {
+        padding-top: 45px;
+      }
+      &__title {
+        margin-bottom: 15px;
+        width: 152px;
+        font-size: 21px;
+      }
+      &__number {
+        margin-bottom: 15px;
+      }
+      &__text {
+        width: 164px;
+      }
+      &--gray {
+        border-bottom: 0 none;
+      }
+      &--gray &__title {
+      }
+      &--gray &__number {
+      }
+      &--gray &__text {
+        width: 158px;
+          &:nth-of-type(2) {
+              width: 150px;
+          }
+      }
+      &__span {
+        display: inline;
+      }
+  }
+}
+@media (min-width: @width-desktop) {
+  .reason{
+    padding-bottom: 66px;
+      &__text {
+        width: 260px;
+      }
+      &--gray &__text {
+        width: 260px;
+      }
+      &__span {
+        display: none;
+      }
+  }
 }

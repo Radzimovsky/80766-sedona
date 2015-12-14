@@ -1,4 +1,5 @@
 .profile {
+  width: 100%;
   margin-bottom: 33px;
     &:last-of-type {
       margin-bottom: 0;
@@ -43,4 +44,46 @@
           margin-bottom: 0;
         }
     }
+}
+@media (min-width: @width-tablet) {
+  .profile {
+      &__data {
+        display: flex;
+        justify-content: space-between;
+      }
+      &__doublet {
+        width: auto;
+          &--center {
+            margin-right: 6px;
+            margin-left: 6px;
+          }
+      }
+
+  }
+}
+@media (min-width: @width-desktop) {
+  .profile {
+      &__number {
+        position: absolute;
+        float: left;
+        width: 61px;
+      }
+      &__data {
+        display: flex;
+        justify-content: space-between;
+        margin-left: 0;
+      }
+      &__doublet {
+        width: 30%;
+          &:first-of-type {
+            box-sizing: border-box;
+            padding-left: 67px;
+          }
+          &--center {
+            margin-right: 0;
+            margin-left: 0;
+          }
+      }
+
+  }
 }

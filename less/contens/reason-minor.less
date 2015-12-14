@@ -49,3 +49,46 @@
       margin-bottom: 0;
     }
 }
+@media (min-width: @width-tablet) {
+  .reason-minor {
+    display: inline-block;
+    vertical-align: top;
+    margin-bottom: 0;
+    padding-left: 0;
+    width: 33.333333%;
+    text-align: center;
+      &__title {
+        padding-top: 162px;
+        font-size: 21px;
+        margin-bottom: 26px;
+          &::before {
+            top: 60px;
+            left: 50%;
+            transform: translateX(-50%);
+            background-size: cover;
+            }
+          &--house::before {
+            width: 76px;
+            height: 76px;
+            background-image: url(../img/house.png);
+          }
+          &--food::before {
+            width: 76px;
+            height: 76px;
+            background-image: url(../img/food.png);
+          }
+          &--souvenirs::before {
+            width: 76px;
+            height: 76px;
+            background-image: url(../img/souvenirs.png);
+          }
+      }
+      &__text {
+        margin: 0 auto;
+        width: 166px;
+          .reason-minor:nth-of-type(2) &{
+            width: 156px;
+          }
+      }
+  }
+}
