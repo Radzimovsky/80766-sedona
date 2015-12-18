@@ -1,0 +1,117 @@
+.reason-minor {
+  position: relative;
+  margin-bottom: 27px;
+  padding-left: 22%;
+  width: 78%;
+  background: #ffffff;
+    &__img {
+      position: absolute;
+      top: 0;
+      left: 7%;
+      fill: @blue-color;
+      transform: translateY(-25%);
+        &--house {
+          width: 37px;
+          height: 37px;
+        }
+        &--food {
+          width: 37px;
+          height: 35px;
+        }
+        &--souvenirs {
+          width: 32px;
+          height: 38px;
+        }
+    }
+    &__title {
+      margin: 0;
+      margin-bottom: 14px;
+      font-size: 18px;
+      line-height: 26px;
+      color: #000000;
+      font-weight: bold;
+      font-family: "PT Sans", "Verdana", sans-serif;
+      text-transform: uppercase;
+    }
+    &__text {
+      box-sizing: border-box;
+      margin: 0;
+      padding-right: 30px;
+      font-size: 14px;
+      line-height: 21px;
+      color: #333333;
+      font-weight: normal;
+      font-family: "PT Sans", "Verdana", sans-serif;
+      text-transform: uppercase;
+    }
+    &:last-child {
+      margin-bottom: 0;
+    }
+}
+@media (min-width: @width-tablet) {
+  .reason-minor {
+    display: inline-block;
+    vertical-align: top;
+    margin-bottom: 0;
+    padding-left: 0;
+    width: 33.333333%;
+    text-align: center;
+      &__img {
+        position: absolute;
+        top: auto;
+        left: 50%;
+        bottom: 140px;
+        transform: translateX(-50%);
+          &--house {
+            width: 75px;
+            height: 72px;
+          }
+          &--food {
+            width: 74px;
+            height: 70px;
+          }
+          &--souvenirs {
+            width: 64px;
+            height: 76px;
+          }
+      }
+      &__title {
+        padding-top: 162px;
+        font-size: 21px;
+        margin-bottom: 26px;
+      }
+      &__text {
+        margin: 0 auto;
+        padding: 0;
+        width: 166px;
+          .reason-minor:nth-of-type(2) &{
+            width: 156px;
+          }
+      }
+  }
+}
+@media (min-width: @width-desktop) {
+  .reason-minor {
+      &__img {
+        position: absolute;
+        top: auto;
+        left: 50%;
+        bottom: 115px;
+        transform: translateX(-50%);
+      }
+      &__title {
+        margin-bottom: 20px;
+      }
+      &__text {
+        margin: 0 auto;
+        padding: 0;
+        width: 300px;
+          .reason-minor:nth-of-type(2) &{
+            width: 300px;
+          }
+          .reason-minor:nth-of-type(3) &{
+            width: 240px;
+          }
+      }
+  }
+}
