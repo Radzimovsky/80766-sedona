@@ -6,6 +6,10 @@ module.exports = function(grunt) {
   var config = {
     pkg: grunt.file.readJSON("package.json"),
 
+    clean: {
+      build: ["build"]
+    },
+
     copy: {
       build: {
         files: [{
@@ -63,6 +67,7 @@ module.exports = function(grunt) {
 
 
   grunt.registerTask("build", [
+    "clean",
     "copy"
   ])
 
