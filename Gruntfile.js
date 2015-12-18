@@ -6,6 +6,23 @@ module.exports = function(grunt) {
   var config = {
     pkg: grunt.file.readJSON("package.json"),
 
+    copy: {
+      build: {
+        files: [{
+          expand: true,
+          cwd: "src",
+          src: [
+            "img/**",
+            "index.html",
+            "form.html",
+            "blog.html",
+            "post.html"
+          ],
+          dest: "build"
+        }]
+      }
+    },
+
     less: {
       style: {
         files: {
@@ -36,11 +53,17 @@ module.exports = function(grunt) {
       }
     }
   };
-  
+
 
 
   // Не редактируйте эту строку
   config = require("./.gosha")(grunt, config);
 
   grunt.initConfig(config);
+
+
+  grunt.registerTask("build", [
+    "copy"
+  ])
+
 };
