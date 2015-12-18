@@ -47,6 +47,14 @@ module.exports = function(grunt) {
       }
     },
 
+    cssmin: {
+      style: {
+        files: {
+          "build/css/style.min.css": ["build/css/style.css"]
+        }
+      }
+    },
+
     watch: {
       style: {
         files: ["less/**/*.less"],
@@ -71,7 +79,8 @@ module.exports = function(grunt) {
     "clean",
     "copy",
     "less",
-    "postcss"
+    "postcss",
+    "cssmin"
   ])
 
 };
