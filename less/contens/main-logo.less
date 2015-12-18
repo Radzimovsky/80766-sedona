@@ -1,12 +1,26 @@
 .main-logo {
   position: absolute;
-  top: 56px * 4 - 2;
-  width: 138px;
+  top: 56px * 4;
+  width: 137px;
+  height: 70px;
   left: 50%;
   transform: translateX(-50%);
-    &__img{
-      width: 100%;
-      display: block;
+    &__background {
+      position: absolute;
+      top: 0;
+      left: 50%;
+      width: 137px;
+      height: 70px;
+      transform: translateX(-50%);
+      fill: @blue-color;
+    }
+    &__img {
+      position: absolute;
+      top: 0;
+      left: 50%;
+      width: 67px;
+      height: 56px;
+      transform: translateX(-50%);
     }
 }
 @media (min-width: @width-tablet) {

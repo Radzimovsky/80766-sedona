@@ -3,7 +3,7 @@
   display: inline-block;
   vertical-align: middle;
   margin: 0;
-  margin-bottom: 9px;
+  margin-bottom: 6px;
   padding-left: 22px;
   width: 100%;
   font-size: 14px;
@@ -36,7 +36,7 @@
     }
 }
 .counter() {
-  margin-bottom: 17px;
+  margin-bottom: 12px;
     &__btn {
       position: relative;
       padding: 0;
@@ -75,6 +75,18 @@
               background-color: #b8b8b8;
               border-radius: 2px;
             }
+            &:hover::before {
+              background-color: #8c8c8c;
+            }
+            &:hover::after {
+              background-color: #8c8c8c;
+            }
+            &:active::before {
+              background-color: #c4c4c4;
+            }
+            &:active::after {
+              background-color: #c4c4c4;
+            }
         }
         &--minus {
           float: left;
@@ -87,6 +99,18 @@
               height: 4px;
               background-color: #b8b8b8;
               border-radius: 2px;
+            }
+            &:hover::before {
+              background-color: #8c8c8c;
+            }
+            &:hover::after {
+              background-color: #8c8c8c;
+            }
+            &:active::before {
+              background-color: #c4c4c4;
+            }
+            &:active::after {
+              background-color: #c4c4c4;
             }
         }
     }

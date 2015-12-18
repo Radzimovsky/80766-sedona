@@ -1,6 +1,6 @@
 .profile {
   width: 100%;
-  margin-bottom: 33px;
+  margin-bottom: 23px;
     &:last-of-type {
       margin-bottom: 0;
     }
@@ -35,8 +35,12 @@
     &__data {
       margin-left: 67px;
     }
+    &__doublet {
+      margin-bottom: 10px;
+    }
     &__label {
       .label();
+      padding-top: 3px;
     }
     &__input {
       .input();
@@ -47,6 +51,7 @@
 }
 @media (min-width: @width-tablet) {
   .profile {
+    margin-bottom: 17px;
       &__data {
         display: flex;
         justify-content: space-between;
@@ -74,7 +79,7 @@
         margin-left: 0;
       }
       &__doublet {
-        width: 30%;
+        width: 29.07%;
           &:first-of-type {
             box-sizing: border-box;
             padding-left: 67px;

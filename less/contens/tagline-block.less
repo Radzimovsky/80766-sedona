@@ -1,12 +1,12 @@
 .tagline-block {
   position: relative;
   width: 100%;
-  padding-top: 40px;
-  padding-bottom: 20px;
+  padding-top: 38px;
+  padding-bottom: 5px;
   background: #ffffff;
     &__tagline {
       margin: 0 auto;
-      margin-bottom: 30px;
+      margin-bottom: 27px;
       width: 258px;
       text-align: center;
       font-size: 18px;
@@ -18,14 +18,17 @@
     }
     &__text {
       margin: 0 auto;
-      width: 254px;
+      width: 280px;
       text-align: center;
       font-size: 14px;
-      line-height: 24px;
+      line-height: 26px;
       color: #333333;
       font-weight: normal;
       font-family: "PT Sans", "Verdana", sans-serif;
       text-transform: uppercase;
+        &--form {
+          line-height: 23px;
+        }
     }
     &::before {
       content: "";
@@ -56,7 +59,7 @@
 @media (min-width: @width-tablet) {
   .tagline-block {
     padding-top: 60px;
-    padding-bottom: 58px;
+    padding-bottom: 40px;
       &__tagline {
         margin-bottom: 33px;
         width: 442px;
@@ -66,8 +69,8 @@
         width: 490px;
       }
       &--form {
-        padding-top: 60px + 15;
-        padding-bottom: 67px;
+        padding-top: 60px + 11;
+        padding-bottom: 57px;
       }
       &--form &__tagline {
         font-size: 30px;
@@ -86,15 +89,23 @@
 }
 @media (min-width: @width-desktop) {
   .tagline-block {
-    padding-top: 65px;
+    padding-top: 55px;
+    padding-bottom: 50px;
+      &__tagline {
+        margin-bottom: 27px;
+      }
       &::before {
-        top: -58px;
+        top: -57px;
         height: 58px;
         background: url(../img/tagline-block-top-desktop.png) no-repeat;
         background-size: 100% 58px;
       }
       &--form {
         padding-top: 110px;
+        padding-bottom: 60px;
+          & .tagline-block__tagline {
+            margin-bottom: 30px;
+          }
       }
   }
 }

@@ -1,16 +1,16 @@
-.reason{
+.reason {
   display: inline-block;
   vertical-align: top;
   width: 100%;
-  padding-top: 60px;
-  padding-bottom: 45px;
+  padding-top: 40px;
+  padding-bottom: 40px;
   background: @blue-color;
     .reason-block:first-of-type & {
-      padding-top: @padding-top + 15;
+      padding-top: 40px + 37;
     }
     &__title {
       margin: 0 auto;
-      margin-bottom: 14px;
+      margin-bottom: 10px;
       width: 214px;
       text-align: center;
       font-size: 18px;
@@ -22,7 +22,7 @@
     }
     &__number {
       margin: 0;
-      margin-bottom: 19px;
+      margin-bottom: 14px;
       text-align: center;
       font-size: 14px;
       line-height: 21px;
@@ -44,11 +44,16 @@
     }
     &--gray {
       margin: 0 auto;
+      padding-top: 27px;
+      padding-bottom: 27px;
       width: 100%;
       background: #eeeeee;
       border-bottom: 1px solid #d6d6d6;
         &:last-child {
           border-bottom: 0 none;
+        }
+        & .reason__text {
+          width: 250px;
         }
     }
     &--gray &__title,
@@ -62,10 +67,13 @@
 }
 @media (min-width: @width-tablet) {
   .reason{
+    display: block;
+    vertical-align: top;
+    float: left;
     padding-top: 45px;
     padding-bottom: 45px;
     width: 33.333333%;
-      .reason-block--swap &{
+      .reason-block--invert &{
         float: right;
       }
       .reason-block:first-of-type & {
@@ -83,6 +91,8 @@
         width: 164px;
       }
       &--gray {
+        display: inline-block;
+        vertical-align: top;
         border-bottom: 0 none;
       }
       &--gray &__title {
@@ -102,7 +112,14 @@
 }
 @media (min-width: @width-desktop) {
   .reason{
-    padding-bottom: 66px;
+      .reason-block--invert &{
+        padding-top: 55px;
+        padding-bottom: 56px;
+      }
+      .reason-block:first-of-type & {
+        padding-top: 55px;
+        padding-bottom: 56px;
+      }
       &__text {
         width: 260px;
       }

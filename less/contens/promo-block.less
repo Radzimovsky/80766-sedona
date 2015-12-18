@@ -1,23 +1,95 @@
 .promo-block {
   width: 100%;
-  padding-top: 45px;
-  padding-bottom: 50px;
-  background: url(../img/background-promo-block.png) no-repeat 50% 20%;
+  padding-top: 47px;
+  padding-bottom: 49px;
+  background-image: url(../img/photo-background@1x.jpg);
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
   background-size: cover;
-    &__image {
+    &__welcome {
       display: block;
       margin: 0 auto;
-      width: 280px;
-      height: 295px;
+      margin-bottom: 8px;
+      width: 144px;
+      height: 35px;
+      fill: @blue-color;
+    }
+    &__tothegorgeous {
+      display: block;
+      margin: 0 auto;
+      margin-bottom: 60px;
+      width: 196px;
+      height: 23px;
+      fill: #766357;
+    }
+    &__sedona {
+      display: block;
+      margin: 0 auto;
+      margin-bottom: 66px;
+      width: 310px;
+      height: 49px;
+      fill: #ffffff;
+        &--form{
+          margin-bottom: 0;
+          width: 175px;
+          height: 30px;
+        }
+    }
+    &__becausecanyon {
+      display: block;
+      margin: 0 auto;
+      width: 197px;
+      height: 54px;
+      fill: #ffffff;
+    }
+    &--form{
+      padding-top: 48px;
+      padding-bottom: 81px;
+      background-position: 50% 45%;
     }
 }
 @media (min-width: @width-tablet) {
   .promo-block {
     padding-top: 76px;
     padding-bottom: 84px;
-      &__image {
-        width: 460px;
-        height: 352px;
+      &__welcome {
+        margin-bottom: 11px;
+        width: 189px;
+        height: 45px;
       }
+      &__tothegorgeous {
+        margin-bottom: 52px;
+        width: 256px;
+        height: 30px;
+      }
+      &__sedona {
+        margin-bottom: 56px;
+        width: 460px;
+        height: 80px;
+          &--form {
+            margin-bottom: 0;
+          }
+      }
+      &__becausecanyon {
+        width: 400px;
+        height: 78px;
+      }
+      &--form {
+        padding-top: 102px;
+        padding-bottom: 111px;
+      }
+  }
+}
+@media (min-width: @width-desktop) {
+  .promo-block {
+      &--form {
+        padding-bottom: 120px;
+      }
+  }
+}
+@media (min-resolution: 144dpi),
+       (min-resolution: 1.5dppx) {
+  .promo-block {
+    background-image: url(../img/photo-background@2x.jpg);
   }
 }
