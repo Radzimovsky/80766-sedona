@@ -17,6 +17,7 @@ module.exports = function(grunt) {
           cwd: "src",
           src: [
             "img/**",
+            "js/script.js",
             "index.html",
             "form.html",
             "blog.html",
@@ -30,7 +31,7 @@ module.exports = function(grunt) {
     less: {
       style: {
         files: {
-          "css/style.css": "less/style.less"
+          "build/css/style.css": "src/less/style.less"
         }
       }
     },
@@ -42,7 +43,7 @@ module.exports = function(grunt) {
         ]
       },
       style: {
-        src: "css/*.css"
+        src: "build/css/*.css"
       }
     },
 
@@ -68,7 +69,9 @@ module.exports = function(grunt) {
 
   grunt.registerTask("build", [
     "clean",
-    "copy"
+    "copy",
+    "less",
+    "postcss"
   ])
 
 };
