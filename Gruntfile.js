@@ -55,6 +55,14 @@ module.exports = function(grunt) {
       }
     },
 
+    uglify: {
+      style: {
+        files: {
+          "build/js/script.min.js": ["build/js/script.js"]
+        }
+      }
+    },
+
     watch: {
       style: {
         files: ["less/**/*.less"],
@@ -80,7 +88,8 @@ module.exports = function(grunt) {
     "copy",
     "less",
     "postcss",
-    "cssmin"
+    "cssmin",
+    "uglify"
   ])
 
 };
