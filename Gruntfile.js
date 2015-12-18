@@ -47,6 +47,21 @@ module.exports = function(grunt) {
       }
     },
 
+    cmq: {
+      style: {
+        files: {
+          "build/css/style.css": ["build/css/style.css"]
+        }
+      }
+    },
+
+    csscomb: {
+      style: {
+        expand: true,
+        src: ["build/css/style.css"]
+      }
+    },
+
     cssmin: {
       style: {
         files: {
@@ -63,6 +78,18 @@ module.exports = function(grunt) {
       }
     },
 
+    imagemin: {
+      images: {
+        options: {
+          optimizationLevel: 3
+        },
+        files: [{
+          expand: true,
+          src: ["build/img/**/*.{png, jpg, svg}"]
+        }]
+      }
+    },
+
     watch: {
       style: {
         files: ["less/**/*.less"],
@@ -75,21 +102,21 @@ module.exports = function(grunt) {
     }
   };
 
-
-
   // Не редактируйте эту строку
   config = require("./.gosha")(grunt, config);
 
   grunt.initConfig(config);
-
 
   grunt.registerTask("build", [
     "clean",
     "copy",
     "less",
     "postcss",
+    "cmq",
+    "csscomb",
     "cssmin",
-    "uglify"
-  ])
+    "uglify",
+    "imagemin"
+  ]);
 
 };
