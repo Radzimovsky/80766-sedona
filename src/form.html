@@ -17,13 +17,10 @@
       </ul>
       <div class="main-logo">
         <svg class="main-logo__background" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-        	 width="137px" height="70.778px" viewBox="0 0 137 70.778" enable-background="new 0 0 137 70.778" xml:space="preserve" alt="background-logo">
+        	 width="137px" height="70.778px" viewBox="0 0 137 70.778" enable-background="new 0 0 137 70.778" xml:space="preserve">
         <path d="M137,0h-14.173H14.173H0l31.279,35.161l0,0l27.8,31.249c5.182,5.824,13.66,5.824,18.842,0l27.8-31.249l0,0L137,0z"/>
         </svg>
-        <picture>
-          <source media="(min-resolution: 144dpi), (min-resolution: 1.5dppx)" srcset="./img/logo-sedona@2x.png">
-          <img class="main-logo__img" src="./img/logo-sedona@1x.png" width="67" height="56" alt="main-logo">
-        </picture>
+        <img class="main-logo__img" src="./img/logo-sedona@1x.png" srcset="./img/logo-sedona@2x.png 2x" width="67" height="56" alt="main-logo">
       </div>
       <button class="main-button main-button--close"></button>
     </header>
@@ -31,7 +28,7 @@
       <div class="promo-block promo-block--form">
         <svg class="promo-block__sedona promo-block__sedona--form" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
         	 width="459.755px" height="79.804px" viewBox="0 0 459.755 79.804" enable-background="new 0 0 459.755 79.804"
-        	 xml:space="preserve" alt="sedona">
+        	 xml:space="preserve">
         <g>
         	<path d="M44.468,21.737c-3.573-2.978-8.139-4.963-12.903-4.963c-3.573,0-8.338,2.084-8.338,6.253c0,4.368,5.261,6.055,8.636,7.146
         		l4.963,1.489c10.422,3.077,18.462,8.337,18.462,20.447c0,7.445-1.787,15.088-7.742,20.15c-5.856,4.963-13.698,7.047-21.241,7.047
@@ -54,7 +51,7 @@
         <h1 class="tagline-block__tagline">Оставьте свой отзыв</h1>
         <p class="tagline-block__text tagline-block__text--form">Помогите нашим отелям стать лучше! оставьте отзыв о них, а также о посещенных вами достопримечательностях.</p>
       </div>
-      <form class="feedback" action="">
+      <form class="feedback" action="#">
         <div class="feedback__block">
           <div class="feedback__wrapper">
             <p class="feedback__title">Представьтесь, пожалуйста:</p>
@@ -90,12 +87,12 @@
             <input class="feedback__arrival-date-input" type="text" id="arrival-date" name="arrival-date" value="4 июля 2015">
           </div>
           <div class="feedback__group">
-            <p class="feedback__text">Дней пребывания: <span class="feedback__required">*</span></p>
+            <label class="feedback__title-label" for="duration-field">Дней пребывания: <span class="feedback__required">*</span></label>
             <div class="duration-counter clearfix">
               <button class="duration-counter__btn duration-counter__btn--plus" type="button"></button>
               <button class="duration-counter__btn duration-counter__btn--minus" type="button"></button>
               <div class="duration-counter__container">
-                <input class="duration-counter__field" type="text" value="14">
+                <input class="duration-counter__field" type="text" id="duration-field" name="duration-field" value="14">
               </div>
             </div>
           </div>
@@ -109,12 +106,12 @@
             <p class="feedback__title">кол-во путешественников:</p>
           </div>
           <div class="feedback__group feedback__group--bottom">
-            <p class="feedback__text feedback__text--not-padding">Кол-во путешественников: <span class="feedback__required">*</span></p>
+            <label class="feedback__title-label feedback__title-label--width" for="participant-field">Кол-во путешественников: <span class="feedback__required">*</span></label>
             <div class="participant-counter">
               <button class="participant-counter__btn participant-counter__btn--plus" type="button"></button>
               <button class="participant-counter__btn participant-counter__btn--minus" type="button"></button>
               <div class="participant-counter__container">
-                <input class="participant-counter__field" type="text" value="2">
+                <input class="participant-counter__field" id="participant-field" name="participant-field" type="text" value="2">
               </div>
             </div>
           </div>
@@ -145,16 +142,16 @@
             </div>
             <div class="profile__data">
               <div class="profile__doublet">
-                <label class="profile__label" for="profile-surname-1">ФАМИЛИЯ: <span class="feedback__required">*</span></label>
-                <input class="profile__input" id="profile-surname-1" type="text" name="surname" value="Иванов">
+                <label class="profile__label" for="profile-surname-2">ФАМИЛИЯ: <span class="feedback__required">*</span></label>
+                <input class="profile__input" id="profile-surname-2" type="text" name="surname" value="Иванов">
               </div>
               <div class="profile__doublet profile__doublet--center">
-                <label class="profile__label" for="profile-name-1">ИМЯ: <span class="feedback__required">*</span></label>
-                <input class="profile__input" id="profile-name-1" type="text" name="name" value="Петр">
+                <label class="profile__label" for="profile-name-2">ИМЯ: <span class="feedback__required">*</span></label>
+                <input class="profile__input" id="profile-name-2" type="text" name="name" value="Петр">
               </div>
               <div class="profile__doublet">
-                <label class="profile__label" for="profile-patronymic-1">Отчество:</label>
-                <input class="profile__input" id="profile-patronymic-1" type="text"  name="patronymic" value="Александрович">
+                <label class="profile__label" for="profile-patronymic-2">Отчество:</label>
+                <input class="profile__input" id="profile-patronymic-2" type="text"  name="patronymic" value="Александрович">
               </div>
             </div>
           </div>
@@ -180,37 +177,37 @@
           <label class="feedback__download-label" for="download">ВЫБРАТЬ ФОТОГРАФИИ</label>
           <div class="preview">
             <figure class="preview__image">
-              <img class="preview__photo" src="./img/preview-image-1.png" alt="photo">
+              <img class="preview__photo" src="./img/preview-image-1.png" width="70" height="70" alt="photo" >
               <a class="preview__delete" href=""></a>
               <figcaption class="preview__name">IMG-686.jpg</figcaption>
             </figure>
             <figure class="preview__image">
-              <img class="preview__photo" src="./img/preview-image-2.png" alt="photo">
+              <img class="preview__photo" src="./img/preview-image-2.png" width="70" height="70" alt="photo">
               <a class="preview__delete" href=""></a>
               <figcaption class="preview__name">IMG-687.jpg</figcaption>
             </figure>
             <figure class="preview__image">
-              <img class="preview__photo" src="./img/preview-image-2.png" alt="photo">
+              <img class="preview__photo" src="./img/preview-image-2.png" width="70" height="70" alt="photo">
               <a class="preview__delete" href=""></a>
               <figcaption class="preview__name">IMG-688.jpg</figcaption>
             </figure>
             <figure class="preview__image">
-              <img class="preview__photo" src="./img/preview-image-3.png" alt="photo">
+              <img class="preview__photo" src="./img/preview-image-3.png" width="70" height="70" alt="photo">
               <a class="preview__delete" href=""></a>
               <figcaption class="preview__name">IMG-689.jpg</figcaption>
             </figure>
             <figure class="preview__image">
-              <img class="preview__photo" src="./img/preview-image-4.png" alt="photo">
+              <img class="preview__photo" src="./img/preview-image-4.png" width="70" height="70" alt="photo">
               <a class="preview__delete" href=""></a>
               <figcaption class="preview__name">IMG-690.jpg</figcaption>
             </figure>
             <figure class="preview__image">
-              <img class="preview__photo" src="./img/preview-image-5.png" alt="photo">
+              <img class="preview__photo" src="./img/preview-image-5.png" width="70" height="70" alt="photo">
               <a class="preview__delete" href=""></a>
               <figcaption class="preview__name">IMG-691.jpg</figcaption>
             </figure>
             <figure class="preview__image">
-              <img class="preview__photo" src="./img/preview-image-6.png" alt="photo">
+              <img class="preview__photo" src="./img/preview-image-6.png" width="70" height="70" alt="photo">
               <a class="preview__delete" href=""></a>
               <figcaption class="preview__name">IMG-692.jpg</figcaption>
             </figure>
@@ -226,7 +223,7 @@
       <div class="social">
         <a class="social__btn social__btn--tw" href="#">
           <svg class="social__img" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-          	 width="17.5px" height="14.663px" viewBox="0 0 17.5 14.663" enable-background="new 0 0 17.5 14.663" xml:space="preserve" alt="twitter">
+          	 width="17.5px" height="14.663px" viewBox="0 0 17.5 14.663" enable-background="new 0 0 17.5 14.663" xml:space="preserve">
           <g id="W6EeEF_1_">
           	<g>
           		<path fill-rule="evenodd" clip-rule="evenodd" d="M11.283,0.153c1.736-0.484,3.074,0.264,3.685,1.15
@@ -241,7 +238,7 @@
         </a>
         <a class="social__btn social__btn--fb" href="#">
           <svg class="social__img" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-          	 width="8.672px" height="18.944px" viewBox="0 0 8.672 18.944" enable-background="new 0 0 8.672 18.944" xml:space="preserve" alt="facebook">
+          	 width="8.672px" height="18.944px" viewBox="0 0 8.672 18.944" enable-background="new 0 0 8.672 18.944" xml:space="preserve">
           <path d="M6.275,3.356c0.799,0,1.599,0,2.398,0c0-1.119,0-2.237,0-3.356c-0.959,0-1.92,0-2.878,0C2.656,0.181,1.54,2.387,1.948,6.114
           	H0v3.518h1.959c0,3.104,0,6.208,0,9.312c1.279,0,2.559,0,3.837,0c0-3.104,0-6.208,0-9.312h2.857V6.114H5.787
           	C5.765,5.069,5.75,3.709,6.275,3.356z"/>
@@ -249,7 +246,7 @@
         </a>
         <a class="social__btn social__btn--utb" href="#">
           <svg class="social__img" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-          	 width="19.979px" height="14.015px" viewBox="0 0 19.979 14.015" enable-background="new 0 0 19.979 14.015" xml:space="preserve" alt="youtube">
+          	 width="19.979px" height="14.015px" viewBox="0 0 19.979 14.015" enable-background="new 0 0 19.979 14.015" xml:space="preserve">
           <path d="M17.145,0H2.835C1.275,0,0,1.275,0,2.835v8.345c0,1.56,1.275,2.835,2.835,2.835h14.31c1.56,0,2.835-1.275,2.835-2.835V2.835
           	C19.979,1.275,18.704,0,17.145,0z M7.036,10.392V3.623l6.769,3.384L7.036,10.392z"/>
           </svg>
